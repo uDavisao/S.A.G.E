@@ -1,5 +1,32 @@
 <?php
+
+session_start();
 include("conexao.php");
+
+if(isset($_POST['email'])){
+
+    $email = $_POST['email'];
+    $senha = md5($_POST['password']);
+
+    $sql = "SELECT * FROM usuarios
+            WHERE email='$email'
+            AND senha='$senha'";
+
+    $resultado = mysqli_query($conexao, $sql);
+
+    if(mysqli_num_rows($resultado) == 1){
+
+        $_SESSION['usuario'] = $email;
+
+        header("Location: index.php");
+        exit;
+
+    } else {
+
+        echo "Usuário ou senha inválidos";
+
+    }
+}
 ?>
 
 <!DOCTYPE html>

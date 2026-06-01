@@ -1,0 +1,100 @@
+:root {
+    --sage-orange: #ff4f00;
+    --sage-orange-600: #e74700;
+    --sage-orange-700: #c93e00;
+    --sage-orange-soft: #fff1e8;
+
+    --sage-green: #00a86b;
+    --sage-green-600: #008d5a;
+    --sage-green-soft: #e9fbf3;
+
+    --sage-red: #e11d48;
+    --sage-red-600: #be123c;
+    --sage-red-soft: #fff0f5;
+
+    --sage-blue: #2563eb;
+    --sage-blue-soft: #edf5ff;
+
+    --sage-purple: #6d5dfc;
+    --sage-purple-soft: #f3f1ff;
+
+    --sage-yellow: #f59e0b;
+    --sage-yellow-soft: #fff7df;
+
+    --sage-bg: #f7f8fa;
+    --sage-surface: #ffffff;
+    --sage-surface-soft: #f9fafb;
+    --sage-text: #111827;
+    --sage-muted: #64748b;
+    --sage-subtle: #94a3b8;
+    --sage-line: #e5e7eb;
+
+    --sage-radius: 14px;
+    --sage-radius-sm: 10px;
+    --sage-radius-lg: 22px;
+    --sage-shadow: 0 10px 28px rgba(15, 23, 42, .08);
+    --sage-shadow-hover: 0 18px 46px rgba(15, 23, 42, .12);
+    --sage-shadow-soft: 0 6px 16px rgba(15, 23, 42, .06);
+
+    --sidebar-width: 260px;
+}
+
+[data-theme="dark"] {
+    --sage-bg: #0f172a;
+    --sage-surface: #111827;
+    --sage-surface-soft: #182235;
+    --sage-text: #f8fafc;
+    --sage-muted: #a9b5c7;
+    --sage-subtle: #718096;
+    --sage-line: #273247;
+
+    --sage-orange-soft: rgba(255, 79, 0, .14);
+    --sage-green-soft: rgba(0, 168, 107, .14);
+    --sage-red-soft: rgba(225, 29, 72, .16);
+    --sage-blue-soft: rgba(37, 99, 235, .18);
+    --sage-purple-soft: rgba(109, 93, 252, .18);
+    --sage-yellow-soft: rgba(245, 158, 11, .16);
+
+    --sage-shadow: 0 16px 38px rgba(0, 0, 0, .35);
+    --sage-shadow-hover: 0 22px 50px rgba(0, 0, 0, .45);
+    --sage-shadow-soft: 0 8px 22px rgba(0, 0, 0, .22);
+}
+
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--sage-text);
+    background:
+        radial-gradient(circle at top right, rgba(255, 79, 0, .07), transparent 34rem),
+        var(--sage-bg);
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+::selection {
+    color: #fff;
+    background: var(--sage-orange);
+}
+
+:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--sage-orange) 32%, transparent);
+    outline-offset: 3px;
+}
+
+svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.15;
+}

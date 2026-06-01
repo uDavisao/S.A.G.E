@@ -1,0 +1,586 @@
+.sage-btn {
+    min-height: 40px;
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-weight: 850;
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, border-color .18s ease;
+}
+
+.sage-btn:hover {
+    transform: translateY(-1px);
+}
+
+.sage-btn-primary {
+    color: #fff;
+    background:
+        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, .28), transparent 28%),
+        linear-gradient(135deg, var(--sage-orange), var(--sage-orange-600));
+    box-shadow: 0 12px 22px rgba(255, 79, 0, .23);
+}
+
+.sage-btn-success {
+    color: #fff;
+    background: linear-gradient(135deg, var(--sage-green), var(--sage-green-600));
+    box-shadow: 0 12px 22px rgba(0, 168, 107, .18);
+}
+
+.sage-btn-ghost {
+    color: var(--sage-text);
+    background: var(--sage-surface);
+    border-color: var(--sage-line);
+}
+
+.sage-btn-success-soft {
+    color: var(--sage-green);
+    background: var(--sage-green-soft);
+    border-color: color-mix(in srgb, var(--sage-green) 28%, transparent);
+}
+
+.sage-btn-danger-soft {
+    color: var(--sage-red);
+    background: var(--sage-red-soft);
+    border-color: color-mix(in srgb, var(--sage-red) 28%, transparent);
+}
+
+.sage-panel {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--sage-line);
+    border-radius: var(--sage-radius);
+    background: var(--sage-surface);
+    box-shadow: var(--sage-shadow);
+}
+
+.sage-panel + .sage-panel {
+    margin-top: 18px;
+}
+
+.sage-panel-header {
+    min-height: 80px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--sage-line);
+    background: color-mix(in srgb, var(--sage-surface) 96%, var(--sage-surface-soft));
+}
+
+.sage-panel-header-between {
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.sage-panel-header-soft {
+    background: linear-gradient(135deg, var(--sage-purple-soft), color-mix(in srgb, var(--sage-purple-soft) 38%, var(--sage-surface)));
+}
+
+.panel-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.panel-title h2 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 950;
+    letter-spacing: -.02em;
+}
+
+.panel-title p {
+    margin: 0;
+    color: var(--sage-muted);
+    font-size: 12px;
+}
+
+.panel-icon,
+.metric-icon,
+.empty-state-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    font-size: 0;
+}
+
+.panel-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.metric-icon {
+    width: 43px;
+    height: 43px;
+}
+
+.empty-state-icon {
+    width: 46px;
+    height: 46px;
+}
+
+.icon-orange,
+.panel-icon-orange,
+.metric-icon-orange {
+    color: var(--sage-orange);
+    background: var(--sage-orange-soft);
+}
+
+.icon-blue,
+.panel-icon-blue,
+.metric-icon-blue {
+    color: var(--sage-blue);
+    background: var(--sage-blue-soft);
+}
+
+.icon-green,
+.panel-icon-green,
+.metric-icon-green {
+    color: var(--sage-green);
+    background: var(--sage-green-soft);
+}
+
+.icon-danger,
+.panel-icon-danger {
+    color: var(--sage-red);
+    background: var(--sage-red-soft);
+}
+
+.icon-purple,
+.panel-icon-purple,
+.metric-icon-purple {
+    color: var(--sage-purple);
+    background: var(--sage-purple-soft);
+}
+
+.sage-toolbar {
+    min-height: 78px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px solid var(--sage-line);
+}
+
+.sage-search {
+    flex: 1 1 360px;
+    width: min(100%, 405px);
+    height: 44px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--sage-muted);
+    background: var(--sage-surface);
+    border: 1px solid var(--sage-line);
+    border-radius: 9px;
+    box-shadow: var(--sage-shadow-soft);
+}
+
+.sage-search:focus-within {
+    border-color: var(--sage-orange);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--sage-orange) 12%, transparent);
+}
+
+.sage-search input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: var(--sage-text);
+    background: transparent;
+}
+
+.toolbar-count {
+    margin-left: auto;
+    color: var(--sage-muted);
+}
+
+.sage-table {
+    min-width: 760px;
+    color: var(--sage-text);
+}
+
+.sage-table thead th {
+    padding: 14px 22px;
+    color: var(--sage-muted);
+    background: var(--sage-surface-soft);
+    border-bottom: 1px solid var(--sage-line);
+    font-size: 11px;
+    font-weight: 950;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.sage-table tbody td {
+    min-height: 64px;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--sage-line);
+    white-space: nowrap;
+}
+
+.empty-row td {
+    white-space: normal;
+}
+
+.empty-state-card {
+    min-height: 150px;
+    padding: 18px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 8px;
+    text-align: center;
+    color: var(--sage-muted);
+}
+
+.empty-state-card strong {
+    color: var(--sage-text);
+    font-size: 15px;
+}
+
+.empty-state-card small {
+    max-width: 340px;
+    line-height: 1.5;
+}
+
+.badge-sage {
+    width: max-content;
+    padding: 5px 10px;
+    display: inline-flex;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.badge-neutral {
+    color: var(--sage-muted);
+    background: var(--sage-surface-soft);
+    border: 1px solid var(--sage-line);
+}
+
+.badge-success {
+    color: var(--sage-green);
+    background: var(--sage-green-soft);
+    border: 1px solid color-mix(in srgb, var(--sage-green) 25%, transparent);
+}
+
+.badge-danger {
+    color: var(--sage-red);
+    background: var(--sage-red-soft);
+    border: 1px solid color-mix(in srgb, var(--sage-red) 25%, transparent);
+}
+
+.sage-field {
+    display: grid;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.sage-field span,
+.sage-field label {
+    color: var(--sage-text);
+    font-size: 14px;
+    font-weight: 850;
+}
+
+.sage-field input,
+.sage-field select,
+.sage-field textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px;
+    color: var(--sage-text);
+    background: var(--sage-surface);
+    border: 1px solid var(--sage-line);
+    border-radius: 10px;
+    outline: 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, .04);
+    transition: .16s ease;
+}
+
+.sage-field textarea {
+    min-height: 104px;
+    padding-top: 13px;
+    resize: vertical;
+}
+
+.sage-field input:focus,
+.sage-field select:focus,
+.sage-field textarea:focus {
+    border-color: var(--sage-orange);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--sage-orange) 13%, transparent);
+}
+
+.sage-field.is-invalid input,
+.sage-field.is-invalid select,
+.sage-field.is-invalid textarea {
+    border-color: var(--sage-red);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--sage-red) 13%, transparent);
+}
+
+.sage-field-error {
+    display: none;
+    color: var(--sage-red);
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.sage-field.is-invalid .sage-field-error {
+    display: block;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 22px 0 14px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid var(--sage-line);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.form-section::before {
+    content: "◇";
+    color: var(--sage-orange);
+}
+
+.form-section-money::before {
+    content: "$";
+    color: var(--sage-green);
+}
+
+.form-section-location::before {
+    content: "⌖";
+    color: var(--sage-purple);
+}
+
+.sage-form-grid-2,
+.sage-form-grid-3 {
+    display: grid;
+    gap: 14px;
+}
+
+.sage-form-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sage-form-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sage-field-with-prefix {
+    position: relative;
+}
+
+.sage-field-with-prefix input {
+    padding-left: 44px;
+}
+
+.sage-field-prefix {
+    position: absolute;
+    left: 15px;
+    bottom: 14px;
+    color: var(--sage-green);
+    font-weight: 850;
+    pointer-events: none;
+}
+
+.sage-select-shell {
+    position: relative;
+}
+
+.sage-select-shell svg {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--sage-muted);
+    pointer-events: none;
+}
+
+.sage-select-shell select {
+    padding-left: 46px;
+}
+
+.sage-feedback {
+    display: none;
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    color: var(--sage-muted);
+    background: var(--sage-surface-soft);
+    border: 1px solid var(--sage-line);
+}
+
+.sage-feedback.active {
+    display: block;
+}
+
+.sage-feedback.success {
+    color: var(--sage-green);
+    background: var(--sage-green-soft);
+    border-color: color-mix(in srgb, var(--sage-green) 25%, transparent);
+}
+
+.sage-feedback.warning {
+    color: var(--sage-orange);
+    background: var(--sage-orange-soft);
+    border-color: color-mix(in srgb, var(--sage-orange) 25%, transparent);
+}
+
+/* Modal próprio do projeto */
+.sage-modal-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+}
+
+.sage-modal-layer.is-open {
+    display: flex;
+}
+
+.sage-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, .68);
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+.sage-modal-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 520px);
+    max-height: calc(100vh - 44px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--sage-line) 82%, transparent);
+    border-radius: 18px;
+    background: var(--sage-surface);
+    box-shadow: 0 34px 90px rgba(2, 6, 23, .34);
+    animation: modal-in .2s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.sage-modal-dialog.modal-lg {
+    width: min(100%, 720px);
+}
+
+.sage-modal-header {
+    min-height: 84px;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--sage-line);
+    background: color-mix(in srgb, var(--sage-surface) 95%, var(--sage-surface-soft));
+}
+
+.sage-modal-header-success {
+    background: linear-gradient(135deg, var(--sage-green-soft), color-mix(in srgb, var(--sage-green-soft) 45%, var(--sage-surface)));
+}
+
+.sage-modal-header-danger {
+    background: linear-gradient(135deg, var(--sage-red-soft), color-mix(in srgb, var(--sage-red-soft) 45%, var(--sage-surface)));
+}
+
+.sage-modal-close {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 10px;
+    color: var(--sage-text);
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.sage-modal-close:hover {
+    background: var(--sage-surface-soft);
+}
+
+.sage-modal-body {
+    padding: 26px 32px 22px;
+    overflow-y: auto;
+}
+
+.sage-modal-footer {
+    padding: 22px 32px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid var(--sage-line);
+    background: color-mix(in srgb, var(--sage-surface) 95%, var(--sage-surface-soft));
+}
+
+body.sage-modal-open {
+    overflow: hidden;
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .sage-table {
+        min-width: 680px;
+    }
+
+    .toolbar-count {
+        margin-left: 0;
+    }
+
+    .sage-form-grid-2,
+    .sage-form-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .sage-modal-layer {
+        padding: 10px;
+    }
+
+    .sage-modal-dialog,
+    .sage-modal-dialog.modal-lg {
+        width: 100%;
+        max-height: calc(100vh - 20px);
+    }
+
+    .sage-modal-header,
+    .sage-modal-body,
+    .sage-modal-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sage-modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .sage-modal-footer .sage-btn {
+        width: 100%;
+    }
+}
